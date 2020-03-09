@@ -19,7 +19,12 @@ describe('Bowling', () => {
   });
 
   it('should score a game with a single strike',()=>{
-    const rolls = [ 10, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const rolls = [ 10, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     expect(score(rolls)).toBe(24);
+  });
+
+  it('should score a game with a double strike',()=>{
+    const rolls = [ 10, 10, 5, 1, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    expect(score(rolls)).toBe(47);
   });
 });
