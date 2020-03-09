@@ -1,5 +1,5 @@
 
-import score from './score';
+import score from './../score';
 
 describe('Bowling', () => {
   it('should score a game with all gutterballs', () => {
