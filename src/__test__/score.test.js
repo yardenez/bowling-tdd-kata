@@ -6,4 +6,10 @@ describe('Bowling', () => {
     const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     expect(score(rolls)).toBe(0);
   });
+
+  it('should score a game with an open frame',()=>{
+    const rolls = [5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    expect(score(rolls)).toBe(8);
+  });
+
 });

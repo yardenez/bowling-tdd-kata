@@ -1,3 +1,3 @@
 export default function score(rolls) {
-  return 0;
+  return rolls.reduce((firstRoll,secondRoll)=>firstRoll+secondRoll,0);
 }
