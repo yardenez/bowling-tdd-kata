@@ -27,4 +27,9 @@ describe('Bowling', () => {
     const rolls = [ 10, 10, 5, 1, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     expect(score(rolls)).toBe(47);
   });
+
+  it('should score a game with double spare',()=>{
+    const rolls = [ 5, 5, 5, 5, 5 ,2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
+    expect(score(rolls)).toBe(37);
+  });
 });
