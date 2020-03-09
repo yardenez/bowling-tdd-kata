@@ -9,7 +9,7 @@ describe('Bowling', () => {
   });
 
   it('should score a game with an open frame',()=>{
-    const rolls = [5, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 3];
     expect(score(rolls)).toBe(8);
   });
 
@@ -32,4 +32,10 @@ describe('Bowling', () => {
     const rolls = [ 5, 5, 5, 5, 5 ,2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
     expect(score(rolls)).toBe(37);
   });
+
+  it('should score a game with strike followed by spare',()=>{
+    const rolls = [ 10, 5, 5, 9, 0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
+    expect(score(rolls)).toBe(48);
+  })
+
 });
