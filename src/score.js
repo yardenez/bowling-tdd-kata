@@ -1,3 +1,19 @@
 export default function score(rolls) {
-  return rolls.reduce((firstRoll,secondRoll)=>firstRoll+secondRoll,0);
+
+  let score = 0;
+  let frameIndex = 0;
+
+  const isStrike = (frameIndex) => rolls[frameIndex] + rolls[frameIndex+1] === 10;
+
+  for(let frame=0; frame < 10; frame++){
+    if(isStrike(frameIndex)){
+      score += 10 + rolls[frameIndex+2];
+    }
+    else{
+      score += rolls[frameIndex]+rolls[frameIndex+1];
+    }    
+    frameIndex+=2;
+  }
+  return score;
 }
+
