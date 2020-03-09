@@ -5,7 +5,6 @@ export default function score(rolls) {
 
   const isStrike = (frameIndex) => rolls[frameIndex] === 10;
   const isSpare = (frameIndex) => rolls[frameIndex] + rolls[frameIndex+1] === 10;
-  const isTenthFrame = (frameIndex) => frameIndex === 18;
 
   for(let frame=0; frame < 10; frame++){
     if(isStrike(frameIndex)){

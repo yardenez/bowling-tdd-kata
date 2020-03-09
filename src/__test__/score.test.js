@@ -36,6 +36,16 @@ describe('Bowling', () => {
   it('should score a game with strike followed by spare',()=>{
     const rolls = [ 10, 5, 5, 9, 0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
     expect(score(rolls)).toBe(48);
-  })
+  });
+  
+  it('should score a game with a tenth frame of strike and a spare',()=>{
+    const rolls = [ 0, 0, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 6, 4 ];
+    expect(score(rolls)).toBe(20);
+  });
+
+  it('should score a game with a tenth frame of three strikes',()=>{
+    const rolls = [ 0, 0, 0, 0, 0 ,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10 ];
+    expect(score(rolls)).toBe(30);
+  });
 
 });
